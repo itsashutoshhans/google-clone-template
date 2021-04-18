@@ -14,7 +14,7 @@ function useGoogleSearch(term) {
         .then((result) => setData(result));
     };
 
-    fetchData();
+    if(term) fetchData();
   }, [term]);
 
   return { data };
